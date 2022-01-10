@@ -25,13 +25,13 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/bruh/.config/sway/forest.jpg fill
+output * bg /home/bruh/Pictures/spaceship.jpg fill
 
 gaps inner 3
 gaps outer 1
 
 default_border pixel 2
-client.focused        	 	#12151d    #12151d    #abb2bf    #c678dd    #12151d
+client.focused        	 	#12151d    #12151d    #abb2bf    #2a9df4    #12151d
 client.unfocused        	#1e222a    #1e222a    #abb2bf	 #282c34    #282c34
 client.focused_inactive 	#1e222a    #1e222a    #abb2bf    #282c34    #282c34
 client.urgent	          	#e06c75    #1e222a    #abb2bf    #e06c75    #e06c75
@@ -91,6 +91,12 @@ bindsym $mod+F1 exec $lock
  
     # filemanager
     bindsym $mod+n exec nautilus
+
+    # specifiedscreenshot
+    bindsym $mod+Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+
+    # screenshot fullscreen
+    bindsym Print exec grim -t png - | wl-copy -t image/png
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
