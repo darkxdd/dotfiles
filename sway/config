@@ -18,14 +18,14 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -d --show run | xargs swaymsg exec --
+set $menu wofi -d --show drun | xargs swaymsg exec --
 
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/bruh/Pictures/spaceship.jpg fill
+output * bg /home/bruh/Pictures/lonely-fish.png fill
 
 gaps inner 3
 gaps outer 1

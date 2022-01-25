@@ -4,6 +4,7 @@
   font-size: 13px;
 }
 
+
 window#waybar {
   /* background-color: rgba(18, 21, 29, 0.98); */
   background: rgba(0, 0, 0, 0);
@@ -49,19 +50,19 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  color: #84C9D9;
+  color: #f28fad;
 }
 
 #workspaces button.urgent {
-  color: #e06c75;
+  color: #e06cda;
 }
 
 #cpu {
-  color: #4E94BF;
+  color: #abe9b3;
 }
 
 #memory {
-  color: #778689;
+  color: #FAE3B0;
 }
 
 #temperature {
@@ -83,7 +84,7 @@ window#waybar.hidden {
 }
 
 #clock {
-  color: #61afef;
+  color: #f2cdcd;
 }
 
 #idle_inhibitor {
@@ -100,7 +101,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  color: #6172b4;
+  color: #96CDFB;
 }
 
 #pulseaudio.muted {
@@ -139,7 +140,7 @@ window#waybar.hidden {
 }
 
 #network {
-    color: #968494
+    color: #DDB6F2;
 }
 
 #network.disconnected {

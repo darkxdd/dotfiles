@@ -1,7 +1,7 @@
 {
     "height": 34, // Waybar height (to be removed for auto height)
     "modules-left": ["sway/workspaces", "custom/media"],
-    "modules-center": ["custom/clock"],
+    "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "cpu", "memory", "pulseaudio", "network", "tray"],
 
     // Modules configuration
@@ -53,9 +53,16 @@
     "tray": {
         "spacing": 10
     },
-    "custom/clock": {
-	"exec": "echo ' '$(date +'%H:%M')' '",
-	"interval": 5
+    "clock": {
+        "format": "  {:%H:%M %a, %b %e }",
+        "tooltip-format": "     January 2022      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 ",
     },
     "cpu": {
         "format": "{usage}%  ",
@@ -88,7 +95,7 @@
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "直 ",
+        "format-wifi": "直  {essid} ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "睊 ",
@@ -116,23 +123,5 @@
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-middle": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": " ",
-            "default": " "
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
-        "on-click": "playerctl play-pause",
-    },
-    "custom/fans": {
-        "format": "{}",
-        "exec": "$HOME/.config/waybar/fans.sh",
-        "escape": true,
-        "restart-interval": 10,
-    }
 }
 
