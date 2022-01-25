@@ -146,6 +146,8 @@ alias rm='rm -i'
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 alias sudo='doas'
 alias vim="nvim"
+alias gpush="git push git@github.com:darkxdd/dotfiles.git"
+alias kitty='LIBGL_ALWAYS_SOFTWARE=1 kitty'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -167,16 +169,7 @@ if ! shopt -oq posix; then
 fi
 
 
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
 
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
 
 #test
 if [[ "$(tty)" = "/dev/tty1" ]]; then
