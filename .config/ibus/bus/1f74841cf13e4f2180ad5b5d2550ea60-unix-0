@@ -1,7 +1,0 @@
-# This file is created by ibus-daemon, please do not modify it.
-# This file allows processes on the machine to find the
-# ibus session bus with the below address.
-# If the IBUS_ADDRESS environment variable is set, it will
-# be used rather than this file.
-IBUS_ADDRESS=unix:abstract=/home/bruh/.cache/ibus/dbus-NlAJEfgG,guid=3d3de5c037a7f97eed5a25ee61fa8564
-IBUS_DAEMON_PID=2812
